@@ -11,14 +11,11 @@ public class HttpDemo
         HttpClient client = HttpClient.newHttpClient();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://scenius.dk"))
+                .uri(URI.create("https://owais.dk"))
                 .build();
-
-
 
         HttpResponse<String> response =
                 client.send(request, HttpResponse.BodyHandlers.ofString());
-
 
         System.out.println(response.statusCode());
         System.out.println(response.body());
